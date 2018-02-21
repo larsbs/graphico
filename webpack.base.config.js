@@ -10,7 +10,7 @@ function resolve(...paths) {
 }
 
 
-if ( ! process.env.APP_ENV || ! process.env.NODE_ENV) {
+if ( ! process.env.NODE_ENV) {
   console.error('ERROR: Missing environment variable. Make sure to load the .env file before running this command.');
   process.exit(1);
 }
@@ -33,7 +33,7 @@ module.exports = {
     ],
   },
   output: {
-    path: resolve('dist', 'renderer'),
+    path: resolve('app', 'dist'),
     publicPath: '/',
     filename: 'js/[name].js',
     sourceMapFilename: 'js/[name].js.map',
@@ -48,19 +48,8 @@ module.exports = {
       failOnError: true,
     }),
     new webpack.DefinePlugin({
-      'process.env.APP_ENV': JSON.stringify(process.env.APP_ENV),
-    }),
-    new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks(module, count) {
-        const context = module.context;
-        return context && context.indexOf('node_modules') >= 0;
-      },
-    }),
-    new webpack.optimize.CommonsChunkPlugin({ name: 'manifest' }),
     new CopyPlugin([
       { from: 'node_modules/graphiql/graphiql.css', to: 'styles/graphiql.css' },
     ]),

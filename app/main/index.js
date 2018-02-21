@@ -14,8 +14,8 @@ function createWindow() {
   });
 
   mainWindow.loadURL(url.format({
-    pathname: process.env.NODE_ENV === 'development' ? `localhost:${process.env.WEBPACK_PORT}` : path.resolve(__dirname, '../index.html'),
     protocol: process.env.NODE_ENV === 'development' ? 'http:' : 'file:',
+    pathname: process.env.NODE_ENV === 'development' ? `localhost:${process.env.WEBPACK_PORT}` : path.resolve(__dirname, '../dist/index.html'),
     slashes: true,
   }));
 

@@ -2,15 +2,13 @@
   "name": "graphiql-electron",
   "version": "1.0.0",
   "main": "app/main/index.js",
-  "license": "UNLICENSED",
-  "private": true,
+  "license": "MIT",
   "scripts": {
-    "re": "sh scripts/run-env.sh",
-    "build": "webpack --config webpack.config.js",
-    "build-vendor": "rimraf vendor/custom-graphiql/dist && webpack --config vendor/custom-graphiql/webpack.config.js",
-    "webpack-server": "webpack-dev-server --config webpack.dev.config.js",
-    "dev": "BABEL_ENV=electron nodemon --exec 'electron -r @babel/register .'",
-    "start": "BABEL_ENV=electron electron -r @babel/register ."
+    "build": "rimraf app/dist && NODE_ENV=production webpack --config webpack.config.js -p",
+    "build-vendor": "rimraf vendor/custom-graphiql/dist && NODE_ENV=production webpack --config vendor/custom-graphiql/webpack.config.js",
+    "webpack-server": "NODE_ENV=development webpack-dev-server --config webpack.dev.config.js",
+    "dev": "BABEL_ENV=electron NODE_ENV=development nodemon --exec 'electron -r @babel/register .'",
+    "start": "BABEL_ENV=electron NODE_ENV=production electron -r @babel/register ."
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0-beta.40",
