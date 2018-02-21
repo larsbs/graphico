@@ -11,7 +11,7 @@ More in the [screenshots](./assets/screenshots) folder.
 
 ![Why gif](./assets/why.gif "Logo Title Text 1")
 
-Basically, because I wasn't happy with the style of the existing [GraphiQL app](https://github.com/skevy/graphiql-app) and [GraphiQL playground] proved to be too resource intensive for me.
+Basically, because I wasn't happy with the style of the existing [GraphiQL app](https://github.com/skevy/graphiql-app) and [GraphQL playground](https://github.com/graphcool/graphql-playground) proved to be too resource intensive for me.
 
 ![GraphQL playground usage](./assets/graphql-playground.png "Logo Title Text 1")
 
