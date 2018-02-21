@@ -9,11 +9,11 @@ More in the [screenshots](./assets/screenshots) folder.
 
 ## But why?
 
-![Why gif](./assets/why.gif "Logo Title Text 1")
+![Why gif](./assets/readme/why.gif "Logo Title Text 1")
 
 Basically, because I wasn't happy with the style of the existing [GraphiQL app](https://github.com/skevy/graphiql-app) and [GraphQL playground](https://github.com/graphcool/graphql-playground) proved to be too resource intensive for me.
 
-![GraphQL playground usage](./assets/graphql-playground.png "Logo Title Text 1")
+![GraphQL playground usage](./assets/readme/graphql-playground.png "Logo Title Text 1")
 
 At first I tried editing the *graphiql-app* code, but in the end, since the app it's not very complex and the existing one wasn't extensible enough, I just decided to create my own app.
 

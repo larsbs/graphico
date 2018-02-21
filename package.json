@@ -11,7 +11,9 @@
     "webpack-server": "NODE_ENV=development WEBPACK_PORT=8081 webpack-dev-server --config webpack.dev.config.js",
     "dev": "NODE_ENV=development nodemon --exec 'electron .'",
     "start": "NODE_ENV=production electron .",
-    "pack": "npm run build && electron-packager ."
+    "create-dmg": "electron-installer-dmg builds/Yagw-darwin-x64/Yagw.app yagw --out=builds --icon=./assets/icon.icns",
+    "package:mac": "electron-packager --icon=./assets/icon.icns . --out=builds",
+    "package": "rimraf builds && npm run build && npm run package:mac"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0-beta.40",
@@ -35,6 +37,7 @@
     "circular-dependency-plugin": "^4.4.0",
     "copy-webpack-plugin": "^4.4.1",
     "css-loader": "^0.28.9",
+    "electron-installer-dmg": "^0.2.1",
     "electron-packager": "^11.0.1",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.7",
