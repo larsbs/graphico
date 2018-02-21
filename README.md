@@ -2,6 +2,10 @@
 
 Yet another [GraphiQL](https://github.com/graphql/graphiql) wrapper using [electron](https://electronjs.org/).
 
+![Main screen of the app](./assets/screenshots/screen1.png "Logo Title Text 1")
+
+More in the [screenshots](./assets/screenshots) folder.
+
 
 ## But why?
 
