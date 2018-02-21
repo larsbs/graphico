@@ -1,0 +1,36 @@
+/*
+ * BUTTON
+ *
+ * Component file
+ */
+
+@import "../vars";
+
+
+.Button {
+  display: inline-block;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2)), lighten(@body-bg, 10%);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: none;
+  color: @default-text-color;
+  padding: (@base-padding * 0.5) @base-padding;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  border-radius: @base-border-radius;
+  outline: 0 !important;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+
+  &:active {
+    filter: brightness(0.7);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    filter: brightness(1);
+    cursor: default;
+  }
+}

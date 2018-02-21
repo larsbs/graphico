@@ -1,0 +1,26 @@
+/*
+ * ROOT
+ *
+ * Route file
+ */
+
+
+.Main {
+  &__mainLayout {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "header"
+      "main";
+  }
+
+  &__header {
+    grid-area: header;
+  }
+
+  &__main {
+    grid-area: main;
+  }
+}
