@@ -1,5 +1,6 @@
 {
-  "name": "graphiql-electron",
+  "name": "yagw",
+  "productName": "yagw",
   "version": "1.0.0",
   "main": "app/main/index.js",
   "license": "MIT",

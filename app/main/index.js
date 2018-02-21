@@ -1,6 +1,6 @@
-import path from 'path';
-import url from 'url';
-import { app, BrowserWindow } from 'electron';
+const path = require('path');
+const url = require('url');
+const { app, BrowserWindow } = require('electron');
 
 
 let mainWindow = null;
