@@ -34,7 +34,7 @@ module.exports = {
   },
   output: {
     path: resolve('app', 'dist'),
-    publicPath: '/',
+    publicPath: '',
     filename: 'js/[name].js',
     sourceMapFilename: 'js/[name].js.map',
   },
@@ -42,6 +42,7 @@ module.exports = {
     new HTMLPlugin({
       filename: 'index.html',
       template: 'app/index.html',
+      inject: false,
     }),
     new CircularDependencyPlugin({
       exclude: /node_modules/,

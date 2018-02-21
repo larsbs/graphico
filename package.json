@@ -4,9 +4,10 @@
   "main": "app/main/index.js",
   "license": "MIT",
   "scripts": {
-    "build": "rimraf app/dist && NODE_ENV=production webpack --config webpack.config.js -p",
+    "build": "rimraf app/dist && NODE_ENV=production webpack --config webpack.config.js",
+    "build-dev": "rimraf app/dist && NODE_ENV=development WEBPACK_PORT=8081 webpack --config webpack.dev.config.js",
     "build-vendor": "rimraf vendor/custom-graphiql/dist && NODE_ENV=production webpack --config vendor/custom-graphiql/webpack.config.js",
-    "webpack-server": "NODE_ENV=development webpack-dev-server --config webpack.dev.config.js",
+    "webpack-server": "NODE_ENV=development WEBPACK_PORT=8081 webpack-dev-server --config webpack.dev.config.js",
     "dev": "BABEL_ENV=electron NODE_ENV=development nodemon --exec 'electron -r @babel/register .'",
     "start": "BABEL_ENV=electron NODE_ENV=production electron -r @babel/register ."
   },

@@ -24,7 +24,6 @@ module.exports = Object.assign({}, webpackBaseConfig, {
     return result;
   }, {}),
   output: Object.assign({}, webpackBaseConfig.output, {
-    publicPath: '/',
   }),
   plugins: [
     ...webpackBaseConfig.plugins,

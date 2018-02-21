@@ -9,11 +9,17 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles/graphiql.css" />
+  <% for (let css in htmlWebpackPlugin.files.css) { %>
+    <link rel="stylesheet" type="text/css" href="<%= htmlWebpackPlugin.files.css[css] %>">
+  <% } %>
   <body>
     <div class="titleBar"></div>
     <div class="appContainer">
       <div id="root"></div>
       <div id="modals-outlet"></div>
     </div>
+    <% for (let chunk in htmlWebpackPlugin.files.chunks) { %>
+      <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    <% } %>
   </body>
 </html>
