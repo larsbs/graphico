@@ -7,8 +7,8 @@ let mainWindow = null;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 1100,
-    height: 800,
+    width: 1300,
+    height: 900,
     // titleBarStyle: 'hiddenInset',
     // frame: false,
   });
