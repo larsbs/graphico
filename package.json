@@ -10,7 +10,8 @@
     "build-vendor": "rimraf vendor/custom-graphiql/dist && NODE_ENV=production webpack --config vendor/custom-graphiql/webpack.config.js",
     "webpack-server": "NODE_ENV=development WEBPACK_PORT=8081 webpack-dev-server --config webpack.dev.config.js",
     "dev": "NODE_ENV=development nodemon --exec 'electron .'",
-    "start": "NODE_ENV=production electron ."
+    "start": "NODE_ENV=production electron .",
+    "pack": "npm run build && electron-packager ."
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0-beta.40",
@@ -34,6 +35,7 @@
     "circular-dependency-plugin": "^4.4.0",
     "copy-webpack-plugin": "^4.4.1",
     "css-loader": "^0.28.9",
+    "electron-packager": "^11.0.1",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.7",
     "friendly-errors-webpack-plugin": "^1.6.1",
