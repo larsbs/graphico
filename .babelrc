@@ -1,9 +1,4 @@
 {
   "presets": [["@babel/env", { "modules": false }], "@babel/stage-0", "@babel/react"],
-  "plugins": [ "react-hot-loader/babel" ],
-  "env": {
-    "electron": {
-      "presets": ["@babel/env", "@babel/stage-0"]
-    }
-  }
+  "plugins": [ "react-hot-loader/babel" ]
 }
