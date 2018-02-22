@@ -19,7 +19,7 @@ if ( ! process.env.NODE_ENV) {
 
 module.exports = {
   resolve: {
-    modules: [ 'node_modules' ],
+    modules: [ 'node_modules', resolve('../') ],
     extensions: ['.js', '.jsx', '.less'],
     symlinks: false,  // Disable to allow resolve peerDependencies in symlinked packages
   },
