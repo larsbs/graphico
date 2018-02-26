@@ -13,7 +13,8 @@
     "start": "NODE_ENV=production electron .",
     "create-dmg": "electron-installer-dmg builds/Yagw-darwin-x64/Yagw.app yagw --out=builds --icon=./assets/icon.icns",
     "package:mac": "electron-packager --icon=./assets/icon.icns . --out=builds",
-    "package": "rimraf builds && npm run build && npm run package:mac"
+    "package": "rimraf builds && npm run build && npm run package:mac",
+    "create-release": "npm run package && npm run create-dmg"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0-beta.40",

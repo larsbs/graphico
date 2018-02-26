@@ -25,6 +25,7 @@ class HeadersModal extends React.Component {
     if (isShown) {
       this.editor = this.editor ? this.editor : new Behave({
         textarea: this.textarea,
+        tabSize: 2,
       });
     }
     else {
