@@ -1,6 +1,7 @@
 import React from 'react';
+import CustomGraphiQL from 'yagw-core';
 
-import CustomGraphiQL from 'custom-graphiql';
+import 'yagw-core/dist/yagw-core.css';
 
 
 class Root extends React.Component {

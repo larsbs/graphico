@@ -18,7 +18,7 @@ if ( ! process.env.NODE_ENV) {
 
 module.exports = {
   resolve: {
-    modules: [ 'node_modules', resolve('vendor') ],
+    modules: [ 'node_modules' ],
     extensions: ['.js', '.jsx', '.less'],
     alias: {
       '~': resolve('app', 'renderer'),
@@ -61,7 +61,7 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        include: [ resolve('app'), resolve('vendor') ],
+        include: [ resolve('app') ],
         use: [
           {
             loader: 'babel-loader',
