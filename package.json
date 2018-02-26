@@ -5,16 +5,16 @@
   "main": "app/main/index.js",
   "license": "MIT",
   "scripts": {
-    "build": "rimraf app/dist && NODE_ENV=production webpack --config webpack.config.js",
-    "build-dev": "rimraf app/dist && NODE_ENV=development WEBPACK_PORT=8081 webpack --config webpack.dev.config.js",
-    "build-vendor": "rimraf vendor/custom-graphiql/dist && NODE_ENV=production webpack --config vendor/custom-graphiql/webpack.config.js",
+    "clean": "rimraf app/dist && rimraf builds",
+    "build": "NODE_ENV=production webpack --config webpack.config.js",
+    "build-dev": "NODE_ENV=development WEBPACK_PORT=8081 webpack --config webpack.dev.config.js",
     "webpack-server": "NODE_ENV=development WEBPACK_PORT=8081 webpack-dev-server --config webpack.dev.config.js",
     "dev": "NODE_ENV=development WEBPACK_PORT=8081 nodemon --exec 'electron .'",
     "start": "NODE_ENV=production electron .",
     "create-dmg": "electron-installer-dmg builds/Yagw-darwin-x64/Yagw.app yagw --out=builds --icon=./assets/icon.icns",
     "package:mac": "electron-packager --icon=./assets/icon.icns . --out=builds",
-    "package": "rimraf builds && npm run build && npm run package:mac",
-    "create-release": "npm run package && npm run create-dmg"
+    "package": "npm run build && npm run package:mac",
+    "create-release": "npm run clean && npm run package && npm run create-dmg"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0-beta.40",
