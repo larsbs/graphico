@@ -1,16 +1,19 @@
 const path = require('path');
 const url = require('url');
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
+
+const createMenu = require('./menu');
 
 
 let mainWindow = null;
+
 
 function createWindow() {
   mainWindow = new BrowserWindow({
     width: 1300,
     height: 900,
-    // titleBarStyle: 'hiddenInset',
-    // frame: false,
+    titleBarStyle: 'hiddenInset',
+    frame: false,
   });
 
   mainWindow.loadURL(url.format({
@@ -22,6 +25,8 @@ function createWindow() {
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
+
+  Menu.setApplicationMenu(createMenu(app, mainWindow));
 }
 
 

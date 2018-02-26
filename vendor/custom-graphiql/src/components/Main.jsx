@@ -44,7 +44,7 @@ class Main extends React.Component {
             onClickToggleHeaders={() => this.setState({ showHeadersModal: ! showHeadersModal }) }/>
         </div>
         <div className="Main__main">
-          <CustomGraphiQL entrypointUrl={finalEntrypoint} headers={headers} />
+          <CustomGraphiQL entrypointUrl={finalEntrypoint} headers={finalHeaders} />
         </div>
         <HeadersModal
           isShown={showHeadersModal}
