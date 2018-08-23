@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HTMLPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 
 function resolve(...paths) {
@@ -48,6 +49,9 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     }),
+    new CopyPlugin([
+      { from: './node_modules/graphiql/graphiql.css', to: 'css/graphiql.css' },
+    ])
   ],
   externals: {
   },

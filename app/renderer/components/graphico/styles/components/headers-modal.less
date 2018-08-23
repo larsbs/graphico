@@ -1,0 +1,74 @@
+/*
+ * HEADERS MODAL
+ *
+ * Component file
+ */
+
+@import "../vars";
+
+
+.HeadersModal {
+  width: 600px;
+  background: @body-bg;
+  border-radius: @base-border-radius;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: @base-padding;
+  }
+
+  &__title {
+
+  }
+
+  &__close {
+    cursor: pointer;
+
+    svg {
+      stroke: @secondary-text-color;
+    }
+
+    &:hover {
+      svg {
+        stroke: @primary-text-color;
+      }
+    }
+  }
+
+  &__body {
+    padding: @base-padding;
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 300px;
+    background: @darkest-gray;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: @base-border-radius;
+    padding: @base-padding;
+    outline: 0 !important;
+    color: @primary-text-color;
+    font-family: monospace;
+    font-size: 16px;
+  }
+
+  &__error {
+    color: red;
+    font-size: 0.76em;
+    margin-top: 5px;
+    opacity: 0.7;
+  }
+
+  &__footer {
+    padding: @base-padding;
+    text-align: right;
+
+    button {
+      margin-left: @base-margin;
+    }
+  }
+}

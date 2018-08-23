@@ -1,0 +1,32 @@
+/*
+ * TABS
+ *
+ * Component file
+ */
+
+@import "../vars";
+
+
+.Tabs {
+  &__tabs {
+    background: @darkest-gray;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  }
+
+  &__tab {
+    min-width: 150px;
+    padding: (@base-padding * 0.8) (@base-padding * 2);
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    color: @tertiary-text-color;
+    position: relative;
+    top: 1px;
+
+    &--active {
+      background: @darker-gray;
+      color: @primary-text-color;
+    }
+  }
+}

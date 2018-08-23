@@ -1,0 +1,138 @@
+/*
+ * CUSTOM GRAPHIQL
+ *
+ * Component file
+ */
+
+@import "../vars";
+
+
+.graphiql-container {
+  font-family: @default-font-family;
+
+  .topBar {
+    height: auto;
+    padding: calc(@base-padding * 0.5) @base-padding;
+    background: @body-bg;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    color: @default-text-color;
+  }
+
+  .execute-button {
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2)), lighten(@body-bg, 10%);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: none;
+
+    svg {
+      fill: @default-text-color;
+    }
+
+    &:hover {
+      filter: brightness(1.2);
+    }
+
+    &:active {
+      background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2)), lighten(@body-bg, 10%);
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      box-shadow: none;
+      filter: brightness(0.7);
+    }
+  }
+
+  .toolbar-button, .toolbar-button.error {
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2)), lighten(@body-bg, 10%);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: none;
+    color: @default-text-color;
+    padding: (@base-padding * 0.5) @base-padding;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    border-radius: @base-border-radius;
+
+    &:hover {
+      filter: brightness(1.2);
+    }
+
+    &:active {
+      background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2)), lighten(@body-bg, 10%);
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      box-shadow: none;
+      filter: brightness(0.7);
+    }
+  }
+
+  .docExplorerShow {
+    min-width: 120px;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2)), lighten(@body-bg, 10%);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-top: 0;
+    box-shadow: none;
+    color: @default-text-color;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding: (@base-padding * 0.5) @base-padding;
+
+    &:hover {
+      filter: brightness(1.2);
+    }
+
+    &::before {
+      border-color: @default-text-color;
+    }
+  }
+
+  .doc-explorer, .historyPaneWrap > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .doc-explorer-title-bar, .history-title-bar {
+    height: auto;
+    padding: calc(@base-padding * 0.5) @base-padding;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: @default-text-color-inversed;
+  }
+
+  .doc-explorer-title, .history-title {
+    font-weight: 400;
+  }
+
+  .doc-explorer-contents, .history-contents {
+    position: relative;
+    top: auto;
+    border: none;
+    height: 0;
+    flex: 1;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .search-box {
+    position: static;
+    border: none;
+    font-size: 1rem;
+    margin: auto;
+    margin-bottom: @base-margin;
+
+    &::before {
+      content: none;
+    }
+
+    input {
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: @base-border-radius;
+      background: rgba(0, 0, 0, 0.05);
+      padding: (@base-padding * 0.5) @base-padding;
+    }
+  }
+
+  .queryWrap {
+    overflow: hidden;  // prevent minimal scroll
+  }
+
+  .error-container {
+    position: static;
+    padding-top: @base-padding;
+  }
+}
