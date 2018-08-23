@@ -1,12 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
-import bootstrap from './bootstrap';
+import { hot } from 'react-hot-loader';
 
 
-bootstrap(() => {
-  ReactDOM.render(
-    <h1>Hello World</h1>,
-    document.getElementById('root'),
-  );
-});
+class App extends React.Component {
+  render() {
+    return (
+      <h1>Hello 2</h1>
+    );
+  }
+}
+
+
+export default hot(module)(App);

@@ -30,7 +30,7 @@ module.exports = {
   entry: {
     main: [
       'modern-normalize/modern-normalize.css',
-      './app/renderer/app.js',
+      './app/renderer/index.js',
     ],
   },
   output: {
