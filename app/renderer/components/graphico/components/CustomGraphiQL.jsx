@@ -27,7 +27,6 @@ class CustomGraphiQL extends React.Component {
 
   render() {
     const { entrypointUrl, headers } = this.props;
-    console.log(headers);
     return (
       <GraphiQL
         editorTheme="material"

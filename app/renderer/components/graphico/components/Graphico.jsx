@@ -5,6 +5,7 @@ import CustomGraphiQL from './CustomGraphiQL';
 import HeadersModal from './HeadersModal';
 
 import styles from '../styles/components/graphico';
+import '../styles/customizations/all';
 
 
 class Graphico extends React.Component {
