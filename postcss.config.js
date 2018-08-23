@@ -3,10 +3,7 @@ const path = require('path');
 
 module.exports = {
   plugins: {
-    'postcss-cssnext': {
-      features: {
-        customProperties: false,
-      },
+    'postcss-preset-env': {
       browsers: [
         '> 1%',
         'last 2 versions',
