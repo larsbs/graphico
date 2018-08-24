@@ -13,7 +13,7 @@ class Graphico extends React.Component {
   state = {
     entrypointUrl: undefined,
     showHeadersModal: false,
-    headers: '',
+    headers: undefined,
   };
 
   render() {
@@ -23,15 +23,15 @@ class Graphico extends React.Component {
         window.localStorage.entrypointUrl;
       }
       else {
-        entrypointUrl;
+        entrypointUrl ?? '';
       }
     }
     const finalHeaders = do {
-      if ( ! headers && window.localStorage.headers) {
+      if (headers == null && window.localStorage.headers) {
         window.localStorage.headers;
       }
       else {
-        headers;
+        headers ?? '{}';
       }
     }
     window.localStorage.entrypointUrl = finalEntrypoint;

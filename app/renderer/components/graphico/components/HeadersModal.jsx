@@ -29,7 +29,7 @@ class HeadersModal extends React.Component {
       });
     }
     else {
-      this.editor ? this.editor.destroy() : null;
+      this.editor && this.editor.destroy ? this.editor.destroy() : null;
       this.editor = null;
     }
   }
