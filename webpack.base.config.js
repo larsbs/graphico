@@ -36,7 +36,7 @@ module.exports = {
   },
   output: {
     path: resolve('app/dist'),
-    publicPath: '/',
+    publicPath: '',
     filename: 'js/[name].js',
     sourceMapFilename: 'js/[name].js.map',
   },
