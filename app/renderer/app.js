@@ -1,26 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
+import { hot } from 'react-hot-loader';
 
-import bootstrap from './bootstrap';
 import Root from './routes/Root';
 
 import './styles/app';
 
 
-bootstrap(() => {
-  const renderApp = (Root) => {
-    ReactDOM.render(
-      <AppContainer warnings={false}>
-        <Root />
-      </AppContainer>,
-      document.getElementById('root'),
+class App extends React.Component {
+  render() {
+    return (
+      <Root />
     );
   }
+}
 
-  if (module.hot) {
-    module.hot.accept('./routes/Root', () => renderApp(Root));
-  }
 
-  renderApp(Root);
-});
+export default hot(module)(App);

@@ -3,10 +3,10 @@ const { Menu, shell } = require('electron');
 
 const menuTemplate = (app, mainWindow, shell) => [
   {
-    label: 'Yagw',
+    label: 'Graphico',
     submenu: [
       {
-        label: 'About Yagw',
+        label: 'About Graphico',
         selector: 'orderFrontStandardAboutPanel:',
       },
       { type: 'separator' },

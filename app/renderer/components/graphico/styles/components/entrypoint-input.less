@@ -1,0 +1,26 @@
+/*
+ * ENTRYPOINT INPUT
+ *
+ * Component file
+ */
+
+@import "../vars";
+
+
+.EntrypointInput {
+  &__input {
+    width: 100%;
+    background: #151C20;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: (@base-padding * 0.5) @base-padding;
+    border-radius: @base-border-radius;
+    color: @primary-text-color;
+    font-size: 0.9em;
+    outline: none !important;
+    font-family: @default-font-family;
+
+    &::placeholder {
+      color: @tertiary-text-color;
+    }
+  }
+}
