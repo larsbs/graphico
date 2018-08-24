@@ -71,6 +71,7 @@
     text-transform: uppercase;
     font-size: 0.8rem;
     padding: (@base-padding * 0.5) @base-padding;
+    padding-top: (@base-padding * 0.5 + 1px);
 
     &:hover {
       filter: brightness(1.2);
@@ -78,6 +79,8 @@
 
     &::before {
       border-color: @default-text-color;
+      margin: 0;
+      margin-right: 5px;
     }
   }
 

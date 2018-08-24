@@ -35,7 +35,6 @@ class CustomGraphiQL extends React.Component {
     const { entrypointUrl, headers } = this.props;
     return (
       <GraphiQL
-        editorTheme="material"
         fetcher={createFetcher({
           entrypointUrl,
           headers: headers ? JSON.parse(headers) : {},
