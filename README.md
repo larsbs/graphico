@@ -1,4 +1,4 @@
-# YAGW
+# Graphico (GraphQL Chico)
 
 Yet another [GraphiQL](https://github.com/graphql/graphiql) wrapper using [electron](https://electronjs.org/).
 
@@ -26,7 +26,7 @@ And of course, this app was a good basis for [graphiql-atom](https://github.com/
 
 ## Installation
 
-Simply download the latest release from the [Releases](https://github.com/larsbs/yagw/releases) tab.
+Simply download the latest release from the [Releases](https://github.com/larsbs/graphico/releases) tab.
 
 
 ## License

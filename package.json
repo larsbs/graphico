@@ -1,7 +1,7 @@
 {
-  "name": "yagw",
-  "productName": "Yagw",
-  "version": "0.2.0",
+  "name": "graphico",
+  "productName": "Graphico",
+  "version": "0.3.0",
   "main": "app/main/index.js",
   "license": "MIT",
   "scripts": {
@@ -11,7 +11,7 @@
     "webpack-server": "NODE_ENV=development WEBPACK_PORT=8081 webpack-serve --config webpack.dev.config.js",
     "dev": "NODE_ENV=development WEBPACK_PORT=8081 nodemon --exec 'electron .'",
     "start": "NODE_ENV=production electron .",
-    "create-dmg": "electron-installer-dmg builds/Yagw-darwin-x64/Yagw.app yagw --out=builds --icon=./assets/icon.icns",
+    "create-dmg": "electron-installer-dmg builds/Graphico-darwin-x64/Graphico.app graphico --out=builds --icon=./assets/icon.icns",
     "package:mac": "electron-packager --icon=./assets/icon.icns . --out=builds",
     "package": "npm run build && npm run package:mac",
     "create-release": "npm run clean && npm run package && npm run create-dmg"
@@ -29,8 +29,7 @@
     "modern-normalize": "^0.5.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-transition-group": "^2.2.1",
-    "yagw-core": "^1.0.1"
+    "react-transition-group": "^2.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-rc.2",
