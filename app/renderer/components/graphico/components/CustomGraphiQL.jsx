@@ -5,7 +5,7 @@ import '../styles/components/custom-graphiql';
 
 
 function createFetcher(options) {
-  return (graphQLParams) => {
+  return async (graphQLParams) => {
     if (options.entrypointUrl && ! options.entrypointUrl.match(/^https?\:\/\/.+/)) {
       return Promise.reject('Invalid entrypoint');
     }
@@ -17,8 +17,14 @@ function createFetcher(options) {
       },
       body: JSON.stringify(graphQLParams),
     };
-    return fetch(options.entrypointUrl, fetchConfig)
-      .then((response) => response.json());
+    try {
+      const response = await fetch(options.entrypointUrl, fetchConfig)
+      const json = await response.json();
+      return json;
+    }
+    catch (err) {
+      return '';
+    }
   };
 }
 

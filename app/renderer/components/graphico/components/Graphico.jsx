@@ -11,7 +11,7 @@ import '../styles/customizations/all';
 class Graphico extends React.Component {
 
   state = {
-    entrypointUrl: '',
+    entrypointUrl: undefined,
     showHeadersModal: false,
     headers: '',
   };
@@ -19,7 +19,7 @@ class Graphico extends React.Component {
   render() {
     const { entrypointUrl, showHeadersModal, headers } = this.state;
     const finalEntrypoint = do {
-      if ( ! entrypointUrl && window.localStorage.entrypointUrl) {
+      if (entrypointUrl == null && window.localStorage.entrypointUrl) {
         window.localStorage.entrypointUrl;
       }
       else {
